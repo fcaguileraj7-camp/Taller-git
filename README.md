@@ -1,2 +1,4 @@
-# Taller-git
-Taller colaborativo
+# Colaboradores Taller
+
+- Santiago Leal
+- Fabian Aguilera
