@@ -19,6 +19,10 @@ def fibonacci():
 def capicua():
     numero = input("Ingrese un número: ")
 
+    if not numero.isdigit():
+        print("Debe ingresar solo números")
+        return
+
     if numero == numero[::-1]:
         print("El número es capicúa")
     else:
