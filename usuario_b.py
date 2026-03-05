@@ -66,4 +66,6 @@ if resultado is None:
 else:
     print(f"El factorial de {num} es: {resultado}")
 
+def mcd(a, b):
+
 
