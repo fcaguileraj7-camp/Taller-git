@@ -20,6 +20,9 @@ def menu():
 
         elif opcion == '2':
             capicua()
+        
+        elif opcion == '3':
+            numero_perfecto()
 
         elif opcion == '0':
             print("Saliendo...")
