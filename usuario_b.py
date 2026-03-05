@@ -25,3 +25,5 @@ else:
     primos = primos_en_rango(inicio, fin)
     print(f"Números primos entre {inicio} y {fin}:")
     print(primos)
+
+def es_primo(numero):
