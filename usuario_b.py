@@ -25,3 +25,22 @@ else:
     primos = primos_en_rango(inicio, fin)
     print(f"Números primos entre {inicio} y {fin}:")
     print(primos)
+
+def es_primo(numero):
+    # Validar que sea mayor que 1
+    if numero <= 1:
+        return False
+    
+    # Verificar divisores desde 2 hasta la raíz cuadrada del número
+    for i in range(2, int(numero ** 0.5) + 1):
+        if numero % i == 0:
+            return False
+    
+    return True
+# Programa principal
+num = int(input("Ingrese un número: "))
+
+if es_primo(num):
+    print("El número es primo.")
+else:
+    print("El número NO es primo.")
