@@ -31,6 +31,10 @@ def capicua():
 def numero_perfecto():
     n = int(input("Ingrese un número: "))
 
+    if n <= 0:
+        print("Debe ingresar un número positivo")
+        return
+
     suma = 0
 
     for i in range(1, n):
