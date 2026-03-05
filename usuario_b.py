@@ -27,3 +27,13 @@ else:
     print(primos)
 
 def es_primo(numero):
+    # Validar que sea mayor que 1
+    if numero <= 1:
+        return False
+    
+    # Verificar divisores desde 2 hasta la raíz cuadrada del número
+    for i in range(2, int(numero ** 0.5) + 1):
+        if numero % i == 0:
+            return False
+    
+    return True
