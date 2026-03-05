@@ -44,3 +44,6 @@ if es_primo(num):
     print("El número es primo.")
 else:
     print("El número NO es primo.")
+
+def factorial(n):
+    
