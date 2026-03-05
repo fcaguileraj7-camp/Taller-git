@@ -15,6 +15,11 @@ def menu():
 
         opcion = input("Seleccione una opción: ")
 
-        if opcion == '0':
+        if opcion == '1':
+            fibonacci() 
+
+        elif opcion == '0':
             print("Saliendo...")
             break
+menu()
+  
