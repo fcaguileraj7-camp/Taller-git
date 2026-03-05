@@ -1,85 +1,61 @@
-def primos_en_rango(inicio, fin):
+def primos_en_rango():
+    inicio = int(input("Ingresa el número inicial: "))
+    fin = int(input("Ingresa el número final: "))
+
+    if inicio > fin:
+        print("El número inicial debe ser menor o igual al número final.")
+        return
+
     def es_primo(n):
         if n < 2:
             return False
-        if n == 2:
-            return True
-        if n % 2 == 0:
-            return False
-        for i in range(3, int(n**0.5) + 1, 2):
+        for i in range(2, int(n**0.5) + 1):
             if n % i == 0:
                 return False
         return True
 
-    return [num for num in range(inicio, fin + 1) if es_primo(num)]
+    primos = [num for num in range(inicio, fin + 1) if es_primo(num)]
+
+    print("Números primos:", primos)
 
 
-# Pedir datos al usuario
-inicio = int(input("Ingresa el número inicial: "))
-fin = int(input("Ingresa el número final: "))
+def es_primo():
+    numero = int(input("Ingrese un número: "))
 
-# Validación básica
-if inicio > fin:
-    print("El número inicial debe ser menor o igual al número final.")
-else:
-    primos = primos_en_rango(inicio, fin)
-    print(f"Números primos entre {inicio} y {fin}:")
-    print(primos)
-
-def es_primo(numero):
-    # Validar que sea mayor que 1
     if numero <= 1:
-        return False
-    
-    # Verificar divisores desde 2 hasta la raíz cuadrada del número
-    for i in range(2, int(numero ** 0.5) + 1):
+        print("El número NO es primo")
+        return
+
+    for i in range(2, int(numero**0.5) + 1):
         if numero % i == 0:
-            return False
-    
-    return True
-# Programa principal
-num = int(input("Ingrese un número: "))
+            print("El número NO es primo")
+            return
 
-if es_primo(num):
-    print("El número es primo.")
-else:
-    print("El número NO es primo.")
+    print("El número es primo")
 
-def factorial(n):
-    # Validar que no sea negativo
+
+def factorial():
+    n = int(input("Ingrese un número: "))
+
     if n < 0:
-        return None
-    
+        print("El factorial no está definido para números negativos.")
+        return
+
     resultado = 1
-    
     for i in range(1, n + 1):
         resultado *= i
-    
-    return resultado
-# Programa principal
-num = int(input("Ingrese un número: "))
 
-resultado = factorial(num)
+    print("El factorial es:", resultado)
 
-if resultado is None:
-    print("El factorial no está definido para números negativos.")
-else:
-    print(f"El factorial de {num} es: {resultado}")
 
-def mcd(a, b):
-    # Algoritmo de Euclides
+def mcd():
+    a = int(input("Ingrese el primer número: "))
+    b = int(input("Ingrese el segundo número: "))
+
     while b != 0:
         a, b = b, a % b
-    return a
 
-
-# Programa principal
-num1 = int(input("Ingrese el primer número: "))
-num2 = int(input("Ingrese el segundo número: "))
-
-resultado = mcd(num1, num2)
-
-print(f"El MCD de {num1} y {num2} es: {resultado}")
+    print("El MCD es:", a)
 
 
 
