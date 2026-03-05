@@ -1,5 +1,5 @@
 from usuario_a import fibonacci, capicua, numero_perfecto
-from usuario_b import primos_rango, es_primo, factorial, mcd
+from usuario_b import primos_en_rango, es_primo, factorial, mcd
 
 def menu():
     while True:
@@ -15,14 +15,39 @@ def menu():
 
         opcion = input("Seleccione una opción: ")
 
-        if opcion == '1':
+        opciones_validas = ['0','1','2','3','4','5','6','7']
+
+        if opcion not in opciones_validas:
+            print("Opción inválida")
+            continue
+
+        elif opcion == '1':
             fibonacci()
+            input("\nPresione Enter para continuar...")
 
         elif opcion == '2':
             capicua()
+            input("\nPresione Enter para continuar...")
         
         elif opcion == '3':
             numero_perfecto()
+            input("\nPresione Enter para continuar...")
+        
+        elif opcion == '4':
+            primos_en_rango()
+            input("\nPresione Enter para continuar...")
+        
+        elif opcion == '5':
+            es_primo()
+            input("\nPresione Enter para continuar...")  
+
+        elif opcion == '6':
+            factorial()
+            input("\nPresione Enter para continuar...") 
+
+        elif opcion == '7':
+            mcd()   
+            input("\nPresione Enter para continuar...")
 
         elif opcion == '0':
             print("Saliendo...")
@@ -31,4 +56,5 @@ def menu():
         else:
             print("Opción inválida")
 
-menu()
+if __name__ == "__main__":
+    menu()
