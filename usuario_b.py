@@ -37,3 +37,10 @@ def es_primo(numero):
             return False
     
     return True
+# Programa principal
+num = int(input("Ingrese un número: "))
+
+if es_primo(num):
+    print("El número es primo.")
+else:
+    print("El número NO es primo.")
