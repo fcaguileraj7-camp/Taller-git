@@ -56,5 +56,14 @@ def factorial(n):
         resultado *= i
     
     return resultado
+# Programa principal
+num = int(input("Ingrese un número: "))
+
+resultado = factorial(num)
+
+if resultado is None:
+    print("El factorial no está definido para números negativos.")
+else:
+    print(f"El factorial de {num} es: {resultado}")
 
 
