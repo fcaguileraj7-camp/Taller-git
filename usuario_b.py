@@ -67,5 +67,15 @@ else:
     print(f"El factorial de {num} es: {resultado}")
 
 def mcd(a, b):
+    # Algoritmo de Euclides
+    while b != 0:
+        a, b = b, a % b
+    return a
+
+
+# Programa principal
+num1 = int(input("Ingrese el primer número: "))
+num2 = int(input("Ingrese el segundo número: "))
+
 
 
